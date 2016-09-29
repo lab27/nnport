@@ -51,9 +51,12 @@ $on-laptop:        800px;
 	text-align:center;
 }
 
+.section {
+	overflow: hidden;
+}
 body {
 	background-color:$dark-blue;
-	background: url(../assets/pianoman.jpg) 50% 50%;
+	background: url(/assets/pianoman.jpg) 50% 50%;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -67,14 +70,19 @@ body {
 
 }
 #design {
-	  background : -moz-linear-gradient(-6.28% 104.46% 44.06deg,rgba(209, 211, 212, 1) 0%,rgba(241, 242, 242, 1) 100%);
-  background : -webkit-linear-gradient(44.06deg, rgba(209, 211, 212, 1) 0%, rgba(241, 242, 242, 1) 100%);
-  background : -webkit-gradient(linear,-6.28% 104.46% ,106.26% -4.43% ,color-stop(0,rgba(209, 211, 212, 1) ),color-stop(1,rgba(241, 242, 242, 1) ));
-  background : -o-linear-gradient(44.06deg, rgba(209, 211, 212, 1) 0%, rgba(241, 242, 242, 1) 100%);
-  background : -ms-linear-gradient(44.06deg, rgba(209, 211, 212, 1) 0%, rgba(241, 242, 242, 1) 100%);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#D1D3D4', endColorstr='#F1F2F2' ,GradientType=0)";
-  background : linear-gradient(45.94deg, rgba(209, 211, 212, 1) 0%, rgba(241, 242, 242, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D1D3D4',endColorstr='#F1F2F2' , GradientType=1);
+	    background : -moz-linear-gradient(-6.28% 104.46% 44.06deg,rgba(188, 190, 192, 1) 0%,rgba(230, 231, 232, 1) 100%);
+  background : -webkit-linear-gradient(44.06deg, rgba(188, 190, 192, 1) 0%, rgba(230, 231, 232, 1) 100%);
+  background : -webkit-gradient(linear,-6.28% 104.46% ,106.26% -4.43% ,color-stop(0,rgba(188, 190, 192, 1) ),color-stop(1,rgba(230, 231, 232, 1) ));
+  background : -o-linear-gradient(44.06deg, rgba(188, 190, 192, 1) 0%, rgba(230, 231, 232, 1) 100%);
+  background : -ms-linear-gradient(44.06deg, rgba(188, 190, 192, 1) 0%, rgba(230, 231, 232, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#BCBEC0', endColorstr='#E6E7E8' ,GradientType=0)";
+  background : linear-gradient(45.94deg, rgba(188, 190, 192, 1) 0%, rgba(230, 231, 232, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#BCBEC0',endColorstr='#E6E7E8' , GradientType=1);
+
+  img {
+  	position: absolute;
+  	//border:1px solid red;
+  }
 }
 #code {
 	background-color:$brand-color;

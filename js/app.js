@@ -79,13 +79,24 @@ var sectionHeight = $(".section").outerHeight()
 
 console.log("screenwidth: " + screenWidth + ", " + "sectionHeight: " + sectionHeight)
 
-var goRight = toString("+="+20)
-var goDown = toString("+="+Math.sqrt(30))
+var elementHeight,elementWidth,offset;
 
-//move phone1
-TweenMax.fromTo($(".post"),5,{x:0,y:0},{x:sectionHeight*1.732, y:sectionHeight, repeat: -1, ease: Power0.easeNone})
-//TweenMax.fromTo($("img.post"), 4, {x:"+=10"}, {x: "+=20", repeat: -1});
+//move things
+var shuttleMe = function(el, offset, speedFactor, delay){
+    elementHeight = el.outerHeight()
+    elementWidth = el.outerWidth()
+    offset = offset
+    duration = 10*speedFactor
+    delay = delay
+    console.log("my coords: " + elementHeight, elementWidth, offset, duration)
 
+TweenMax.fromTo(el,duration,{x:0-elementWidth-offset,y:0-elementHeight-offset},{x:(sectionHeight*1.73205)+offset, y:sectionHeight+offset, repeat: -1, delay: delay, ease: Power0.easeNone})
+}
+
+shuttleMe($(".post"),100,1.1, 0)
+shuttleMe($(".vr"),300,1.6, 2)
+shuttleMe($(".atfront"),100,1.1, 4)
+shuttleMe($(".craft"),300,1.6, 8)
 
 
 
