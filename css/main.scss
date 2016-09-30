@@ -88,6 +88,25 @@ body {
   }
 }
 
+#about {
+	svg {
+		position:absolute;
+		top:0;
+	}
+}
+
+#about-text {
+	padding:24px;
+	max-width: 30em;
+	font-weight:300;
+	font-size:2.3em;
+	margin: 0 auto;
+	position:relative;
+	@include media-query($on-palm){
+		font-size: 1.4em;
+	}
+}
+
 #sky {
 background-image: url('../assets/desert.jpg');
 }

@@ -106,7 +106,36 @@ $('#stage').mouseParallax({ moveFactor: 4 });
 $('#fore-foreground').mouseParallax({ moveFactor: 15 });
 $('#fore-fore-foreground').mouseParallax({ moveFactor: 20 });
 
-//$('body').height(3000);
+//drift the shapes
+//var shape = $("#about svg").each("polygon");
 
+// function driftShapes(el){
+//     TweenMax.to(el,2,{x:Math.random()*.5, onComplete: driftShapes})
+// }
 
+// function driftAll() {
 
+//     $("#about svg").children().each(function(){
+//         var curX = $(this).position.left
+//         var curY = $(this).position.top
+//         var newX = Math.random()*10;
+//         var newY = Math.random()*9;
+//         var duration = Math.random()*5;
+
+//     TweenMax.fromTo($(this),duration,{x:curX, y:curY},{x:newX, y:newY, repeat:-1, ease: Power0.none, onComplete:function(){
+//         console.log("i moved it")
+//     }})
+// })
+// }
+   
+
+// driftAll()
+
+function doAll(){
+    console.log("running do all")
+$("#about svg").children().each(function(){
+     TweenMax.to($(this),1,{x:"+100",y:"+100",onComplete:doAll})
+});
+}
+
+doAll();
