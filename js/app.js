@@ -99,4 +99,14 @@ shuttleMe($(".atfront"),100,1.1, 4)
 shuttleMe($(".craft"),300,1.6, 8)
 
 
+//parallax:
+$('#sky').mouseParallax({ moveFactor: 1 });
+$('#matterhorn').mouseParallax({ moveFactor: 3});
+$('#stage').mouseParallax({ moveFactor: 4 });
+$('#fore-foreground').mouseParallax({ moveFactor: 15 });
+$('#fore-fore-foreground').mouseParallax({ moveFactor: 20 });
+
+//$('body').height(3000);
+
+
 

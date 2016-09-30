@@ -39,6 +39,7 @@ $on-laptop:        800px;
 // Import partials from the `minima` theme.
 @import "minima";
 @import "javascript.fullPage.css";
+@import "mouseparallax.css";
 
 // .section {
 // 	display: flex;
@@ -56,7 +57,7 @@ $on-laptop:        800px;
 }
 body {
 	background-color:$dark-blue;
-	background: url(/assets/pianoman.jpg) 50% 50%;
+	// background: url(/assets/pianoman.jpg) 50% 50%;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -67,6 +68,8 @@ body {
 	// background-size: cover;
 	// background-attachment: fixed;
 	background:none;
+	 position: relative; 
+  overflow: hidden;
 
 }
 #design {
@@ -83,6 +86,27 @@ body {
   	position: absolute;
   	//border:1px solid red;
   }
+}
+
+#sky {
+background-image: url('../assets/desert.jpg');
+}
+
+#matterhorn {
+background-image: url('../assets/matterhorn.png') ;
+
+}
+
+#stage {
+background-image: url('../assets/stage.png');
+
+}
+
+#fore-foreground {
+//background-image: url('https://lh5.ggpht.com/En6hYdfOjgUHvRdOsGeNvtrmSbtI_TyrfFJJIYUsE0uGDMA8jQ8W8bKSR_NRNpLRCio=w300');
+}
+#fore-fore-foreground {
+background-image: url('../assets/palms.png');
 }
 #code {
 	background-color:$brand-color;

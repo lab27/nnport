@@ -12,7 +12,7 @@ LICENSE: The MIT License (MIT)
 	
 		mouseParallax: function(options) {
 		
-			var defaults = { moveFactor: 5, zIndexValue: "-1", targetContainer: 'body' };
+			var defaults = { moveFactor: 5, zIndexValue: "-1", targetContainer: '#intro' };
 		
 			var options = $.extend(defaults, options);
 		
