@@ -111,8 +111,9 @@ $('#fore-fore-foreground').mouseParallax({ moveFactor: 20 });
 
 //color the shapes
 function colorShapes(){
+    //colro the background of the about section
     TweenMax.set("#about",{background: "#A39A87"})
-    TweenMax.set("#about-text",{background:"#A39A87"})
+//    TweenMax.set("#about-text",{background:"#A39A87"})
     $("#about svg").children().each(function(){
         //select random color:
         var color = colors[Math.floor(Math.random()*colors.length)];
