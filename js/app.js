@@ -1,3 +1,6 @@
+//vars
+var colors = ["#DF785A","#A39A87","#F47A53","#DE9527","#644D53","#332432"]
+
 //Init fullpage
 $(document).ready(function() {
     $('#fullpage').fullpage({
@@ -73,8 +76,8 @@ var sectionHeight = $(".section").outerHeight()
 
 //renew on resize
 $( window ).resize(function() {
-  var screenWidth = $(window).width()
-var sectionHeight = $(".section").outerHeight()
+    var screenWidth = $(window).width()
+    var sectionHeight = $(".section").outerHeight()
 });
 
 console.log("screenwidth: " + screenWidth + ", " + "sectionHeight: " + sectionHeight)
@@ -106,36 +109,35 @@ $('#stage').mouseParallax({ moveFactor: 4 });
 $('#fore-foreground').mouseParallax({ moveFactor: 15 });
 $('#fore-fore-foreground').mouseParallax({ moveFactor: 20 });
 
-//drift the shapes
-//var shape = $("#about svg").each("polygon");
+//color the shapes
+function colorShapes(){
+    TweenMax.set("#about",{background: "#A39A87"})
+    TweenMax.set("#about-text",{background:"#A39A87"})
+    $("#about svg").children().each(function(){
+        //select random color:
+        var color = colors[Math.floor(Math.random()*colors.length)];
+        //give it a random color
+        TweenMax.set($(this),{fill:color})
 
-// function driftShapes(el){
-//     TweenMax.to(el,2,{x:Math.random()*.5, onComplete: driftShapes})
-// }
-
-// function driftAll() {
-
-//     $("#about svg").children().each(function(){
-//         var curX = $(this).position.left
-//         var curY = $(this).position.top
-//         var newX = Math.random()*10;
-//         var newY = Math.random()*9;
-//         var duration = Math.random()*5;
-
-//     TweenMax.fromTo($(this),duration,{x:curX, y:curY},{x:newX, y:newY, repeat:-1, ease: Power0.none, onComplete:function(){
-//         console.log("i moved it")
-//     }})
-// })
-// }
-   
-
-// driftAll()
-
-function doAll(){
-    console.log("running do all")
-$("#about svg").children().each(function(){
-     TweenMax.to($(this),1,{x:"+100",y:"+100",onComplete:doAll})
-});
+    })
 }
 
+//drift the shapes
+function doAll(){
+    //console.log("running do all")
+    $("#about svg").children().each(function(){
+        var element = $(this)
+        var newX = Math.random()*60
+        var newY = Math.random()*70
+        var rotation = Math.random()*30
+        var duration = Math.random()*50
+        console.log("newX: " + newX + ", newY: " + newY)
+         TweenMax.to(element,duration,{x:newX,y:newY,rotation: rotation, ease: Power2.easeInOutCubic, onComplete:doAll})
+    });
+}
+
+//run stuff
 doAll();
+colorShapes()
+
+
